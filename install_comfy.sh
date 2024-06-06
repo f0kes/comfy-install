@@ -94,7 +94,7 @@ function install_comfyui() {
         printf "Downloading ComfyUI...\n"
         git clone https://github.com/comfyanonymous/ComfyUI
         cd "${COMFYUI_PATH}" || exit
-        pip install torch torchvision torchaudio --extra-index-url https://my_download.pytorch.org/whl/cu121
+        pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu121
         pip install -r requirements.txt
     fi
 }

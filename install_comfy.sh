@@ -159,4 +159,4 @@ function my_download() {
 
 main
 pip install gdown
-gdown ${GOOGLE_DRIVE_FOLDER} -O ${INPUT_PATH}
+gdown ${GOOGLE_DRIVE_FOLDER} -O ${INPUT_PATH} --folder

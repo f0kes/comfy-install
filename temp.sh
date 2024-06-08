@@ -36,4 +36,9 @@ function get_models() {
     done
 }
 
+# Download from $1 URL to $2 file path
+function my_download() {
+    wget -qnc --content-disposition --show-progress -e dotbytes="${3:-4M}" -P "$2" "$1"
+}
+
 get_models "${CHECKPOINT_PATH}" "${CHECKPOINT_MODELS[@]}"

@@ -20,6 +20,9 @@ NODES=(
 
 CHECKPOINT_MODELS=(
     "https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pruned-emaonly.ckpt"
+    "https://huggingface.co/Zhengyi/CRM/resolve/main/ccm-diffusion.pth"
+    "https://huggingface.co/Zhengyi/CRM/resolve/main/pixel-diffusion.pth"
+    "https://huggingface.co/Zhengyi/CRM/resolve/main/CRM.pth"
     #"https://huggingface.co/Zhengyi/CRM/resolve/main/ccm-diffusion.pth"
     #"https://huggingface.co/Zhengyi/CRM/resolve/main/pixel-diffusion.pth"
     #"https://huggingface.co/Zhengyi/CRM/resolve/main/CRM.pth"

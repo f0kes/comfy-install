@@ -10,7 +10,6 @@ CONTROLNET_PATH="${COMFYUI_PATH}/models/controlnet"
 INPUT_PATH="${COMFYUI_PATH}/input"
 GOOGLE_DRIVE_FOLDER="https://drive.google.com/drive/folders/1upDm3Ef0GuBjkNLF7zsQTEgrBQRPJ0Ki"
 
-
 NODES=(
     "https://github.com/ltdrdata/ComfyUI-Manager"
     "https://github.com/aravindhv10/ComfyUI-TiledDiffusion#fix_controlnet"
@@ -18,7 +17,6 @@ NODES=(
     "https://github.com/ltdrdata/ComfyUI-Inspire-Pack"
     "https://github.com/WASasquatch/was-node-suite-comfyui"
 )
-
 
 CHECKPOINT_MODELS=(
     "https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pruned-emaonly.ckpt"
@@ -164,4 +162,6 @@ gdown ${GOOGLE_DRIVE_FOLDER} -O ${INPUT_PATH} --folder
 #wget https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb
 #dpkg -i cloudflared-linux-amd64.deb
 #python /workspace/comfy-install/cloudflare.py
+apt-get install wget git libgl1 libglib2.0-0 -y
+source /workspace/comfy-install/3d.sh
 python /workspace/ComfyUI/main.py --listen

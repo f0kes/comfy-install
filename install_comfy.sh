@@ -163,5 +163,5 @@ gdown ${GOOGLE_DRIVE_FOLDER} -O ${INPUT_PATH} --folder
 #dpkg -i cloudflared-linux-amd64.deb
 #python /workspace/comfy-install/cloudflare.py
 apt-get install wget git libgl1 libglib2.0-0 -y
-source /workspace/comfy-install/3d.sh
+source /workspace/comfy-install/flowty_crm.sh
 python /workspace/ComfyUI/main.py --listen

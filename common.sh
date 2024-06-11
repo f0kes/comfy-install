@@ -12,7 +12,7 @@ GOOGLE_DRIVE_FOLDER="https://drive.google.com/drive/folders/1upDm3Ef0GuBjkNLF7zs
 
 function get_nodes() {
     local nodes=("$@")
-    
+
     for repo in "${nodes[@]}"; do
         IFS="#" read -r url branch <<<"${repo}"
         url="${url:-$repo}"
@@ -20,6 +20,7 @@ function get_nodes() {
         dir="${url##*/}"
         path="${COMFYUI_PATH}/custom_nodes/${dir}"
         requirements="${path}/requirements.txt"
+        requirements_cuda="${path}/requirements-cuda.txt"
 
         if [[ -d $path ]]; then
             if [[ ${AUTO_UPDATE,,} != "false" ]]; then
@@ -32,6 +33,9 @@ function get_nodes() {
                 if [[ -e $requirements ]]; then
                     pip install -r "$requirements"
                 fi
+                if [[ -e $requirements_cuda ]]; then
+                    pip install -r "$requirements"
+                fi
             fi
         else
             printf "Downloading node: %s...\n" "${repo}"
@@ -41,6 +45,9 @@ function get_nodes() {
                 git clone "${url}" "${path}" --recursive
             fi
             if [[ -e $requirements ]]; then
+                pip install -r "$requirements"
+            fi
+            if [[ -e $requirements_cuda ]]; then
                 pip install -r "$requirements"
             fi
         fi

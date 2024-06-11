@@ -158,7 +158,6 @@ function my_download() {
     wget -qnc --content-disposition --show-progress -e dotbytes="${3:-4M}" -P "$2" "$1"
 }
 
-
 main
 pip install gdown
 gdown ${GOOGLE_DRIVE_FOLDER} -O ${INPUT_PATH} --folder
@@ -168,5 +167,5 @@ gdown ${GOOGLE_DRIVE_FOLDER} -O ${INPUT_PATH} --folder
 #python /workspace/comfy-install/cloudflare.py
 apt-get install wget git libgl1 libglib2.0-0 -y
 #source /workspace/comfy-install/flowty_crm.sh
-source /workspace/comfy-install/flowry-triposr.sh
+#source /workspace/comfy-install/flowry-triposr.sh
 python /workspace/ComfyUI/main.py --listen
